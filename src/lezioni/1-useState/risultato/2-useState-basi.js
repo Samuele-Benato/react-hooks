@@ -8,7 +8,7 @@ const UsoBase = () => {
   /**
    * @type {[String, Function]} titolo
    */
-  const [titolo, setTitolo] = useState("Hello World!!");
+  const [titolo, setTitolo] = useState("Non toccarla");
   //   const value = useState()[0];
   //   const handler = useState()[1];
   //   console.log(value, handler);
@@ -18,22 +18,22 @@ const UsoBase = () => {
    * @returns {undefined}
    */
   const cambiaTitolo = () => {
-    if (titolo === "Hello World!!") {
-      setTitolo("React Magic!");
+    if (titolo === "Non toccarla") {
+      setTitolo("Bro...");
     } else {
-      setTitolo("Hello World!!");
+      setTitolo("Non toccarla");
     }
   };
   return (
     <>
-      <h2> {titolo}</h2>
       <button
         type="button"
-        className="btn btn-info shadow my-3"
+        className="btn btn-outline-dark shadow my-3"
         onClick={cambiaTitolo}
       >
-        Cambiami
+        Toccami 
       </button>
+      <h2> {titolo}</h2>
     </>
   );
 };

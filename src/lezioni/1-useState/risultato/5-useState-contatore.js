@@ -23,7 +23,7 @@ const CounterComponent = () => {
   };
 
   /**
-   * Funzione per aumentare il contatore dopo 2000 millisecondi
+   * Funzione per aumentare il contatore dopo 200 millisecondi
    * @return {undefined}
    */
   const aumentaContatoreTemporale = () => {
@@ -31,17 +31,17 @@ const CounterComponent = () => {
       setContatore((oldValue) => {
         return oldValue + 1;
       });
-    }, 2000);
+    }, 200);
   };
   return (
-    <div className='bg-white shadow rounded p-5 w-75 col-6 offset-3'>
+    <div className='bg-white shadow rounded p-3 mx-auto col-6'>
       <h3>{contatore}</h3>
       <div className='d-flex justify-content-between'>
         <button className='button my-2' onClick={dimContatore}>
           {" "}
           Diminuisci{" "}
         </button>
-        <button className='button my-2' onClick={aumentaContatoreTemporale}>
+        <button className='button my-2 ms-1' onClick={aumentaContatoreTemporale}>
           {" "}
           Aumenta{" "}
         </button>
