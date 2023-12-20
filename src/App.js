@@ -1,4 +1,4 @@
-import Inizio from "./lezioni/1-useState/inizio/5-useState-contatore.js";
+import Inizio from "./lezioni/2-useEffect/inizio/3-useEffect-fetch-data.js";
 import Risultato from "./lezioni/2-useEffect/risultato/1-useEffect-basi.js";
 
 function App() {

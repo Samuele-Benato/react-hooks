@@ -1,9 +1,22 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 
 const CleanUp = () => {
+  const [size, setSize] = useState(window.innerWidth)
+
+  function windowSize(){
+    setSize(window.innerWidth)
+  }
+
+  useEffect(() => {
+    window.addEventListener('resize' , windowSize)
+
+    return () => {
+      window.removeEventListener('resize' , windowSize)
+    }
+  })
   return (
-    <div>
-      <h1> CleanUp Componente </h1>
+    <div className="container col-6 mx-auto bg-black shadow py-4 text-white rounded-3">
+      <h1>{size}</h1>
     </div>
   );
 };
